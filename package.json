@@ -6,10 +6,10 @@
   "private": true,
   "license": "MIT",
   "author": "VR Developments",
-  "homepage": "https://github.com/VR-Developments/readme-doctor",
+  "homepage": "https://github.com/Volam-Rakshith/ReadME.Doctor",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VR-Developments/readme-doctor.git"
+    "url": "https://github.com/Volam-Rakshith/ReadME.Doctor.git"
   },
   "keywords": [
     "readme",
@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test test/",
-    "test:watch": "node --test --watch test/"
+    "test": "node --test",
+    "test:watch": "node --test --watch"
   },
   "dependencies": {},
   "devDependencies": {}

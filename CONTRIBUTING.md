@@ -23,7 +23,7 @@ First: thank you for considering a contribution. README Doctor exists because do
 ## Development setup
 
 ```bash
-git clone https://github.com/VR-Developments/readme-doctor.git
+git clone https://github.com/Volam-Rakshith/ReadME.Doctor.git
 cd readme-doctor
 npm start        # dev server on http://localhost:3000 (zero dependencies)
 npm test         # run the suite

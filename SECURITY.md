@@ -1,6 +1,6 @@
 # Security Policy
 
-README Doctor is a VR Developments project. This policy covers the [readme-doctor](https://github.com/VR-Developments/readme-doctor) repository and its published GitHub Pages site.
+README Doctor is a VR Developments project. This policy covers the [readme-doctor](https://github.com/Volam-Rakshith/ReadME.Doctor) repository and its published GitHub Pages site.
 
 ## Supported versions
 

@@ -4,7 +4,7 @@
 
 > *Your README doesn't need another generator. It needs a diagnosis.*
 
-[![CI](https://github.com/VR-Developments/readme-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/VR-Developments/readme-doctor/actions/workflows/ci.yml)
+[![CI](https://github.com/Volam-Rakshith/ReadME.Doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/Volam-Rakshith/ReadME.Doctor/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2dd4a7.svg)](LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-62a9ff.svg)](package.json)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ffb224.svg)](CONTRIBUTING.md)
@@ -38,7 +38,7 @@ Every finding explains four things:
 ## Installation
 
 ```bash
-git clone https://github.com/VR-Developments/readme-doctor.git
+git clone https://github.com/Volam-Rakshith/ReadME.Doctor.git
 cd readme-doctor
 npm start
 ```
@@ -134,4 +134,4 @@ To report a vulnerability, see [SECURITY.md](SECURITY.md). Please do not open pu
 
 ---
 
-*README Doctor is built by [VR Developments](https://github.com/VR-Developments). Diagnose documentation. Don't blindly generate it.*
+*README Doctor is built by [VR Developments](https://github.com/Volam-Rakshith). Diagnose documentation. Don't blindly generate it.*
