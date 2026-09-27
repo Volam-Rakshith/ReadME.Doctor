@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>README Doctor — Diagnose documentation. Don't blindly generate it.</title>
+  <meta name="description" content="README Doctor diagnoses an existing README instead of generating one. It finds what makes a project harder to understand, install, use, contribute to, or trust — with evidence for every finding. By VR Developments.">
+  <meta property="og:title" content="README Doctor">
+  <meta property="og:description" content="Your README doesn't need another generator. It needs a diagnosis.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%230B0F16'/%3E%3Cpath%20d='M6%2018h4l2.2-6%203.4%2010%202.4-7%201.4%203h6.6'%20fill='none'%20stroke='%232DD4A7'%20stroke-width='2.4'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="brandHome" aria-label="README Doctor — home">
+      <svg class="brand-mark" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <path d="M8 2.75h10.5l6 6v20a1.4 1.4 0 0 1-1.4 1.4H8a1.4 1.4 0 0 1-1.4-1.4V4.15A1.4 1.4 0 0 1 8 2.75Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path d="M18.5 2.75V9h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M9.6 19.4h3.2l2-5.4 3.3 9.4 2.3-6.6 1.3 1.8h3.7" fill="none" class="brand-pulse" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        <strong>README&nbsp;Doctor</strong>
+        <small>by VR Developments</small>
+      </span>
+    </a>
+    <nav class="topbar-actions" aria-label="Global">
+      <button class="btn btn-ghost" id="btnMethodology" type="button">Methodology</button>
+      <button class="btn btn-ghost icon-only" id="btnShortcuts" type="button" aria-label="Keyboard shortcuts" title="Keyboard shortcuts (?)">?</button>
+      <button class="btn btn-ghost icon-only" id="btnTheme" type="button" aria-label="Switch color theme" title="Switch theme">
+        <svg class="theme-icon-dark" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M14.8 12.5A6.8 6.8 0 0 1 7.5 5.2c0-.8.15-1.6.42-2.3A6.8 6.8 0 1 0 17.1 12.1c-.7.27-1.5.42-2.3.42Z" fill="currentColor"/></svg>
+        <svg class="theme-icon-light" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="4" fill="currentColor"/><path d="M10 1v2.5M10 16.5V19M1 10h2.5M16.5 10H19M3.4 3.4l1.8 1.8M14.8 14.8l1.8 1.8M16.6 3.4l-1.8 1.8M5.2 14.8l-1.8 1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn btn-ghost" href="https://github.com/VR-Developments/readme-doctor" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================ HOME ============================ -->
+    <section class="view view-home" id="view-home">
+      <div class="hero">
+        <p class="hero-kicker">Open source by VR Developments &middot; MIT</p>
+        <h1 class="hero-title">Your README doesn't need another generator.<br><em>It needs a diagnosis.</em></h1>
+        <p class="hero-sub">
+          README Doctor examines the documentation you already have and reports what makes your project
+          harder to <strong>understand</strong>, <strong>install</strong>, <strong>use</strong>,
+          <strong>contribute to</strong>, or <strong>trust</strong> — with evidence for every finding.
+        </p>
+      </div>
+
+      <div class="input-card" id="inputCard">
+        <div class="input-tabs" role="tablist" aria-label="Input method">
+          <button class="input-tab" id="tab-repo" role="tab" aria-selected="true" aria-controls="panel-repo" data-panel="repo">
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub repository
+          </button>
+          <button class="input-tab" id="tab-paste" role="tab" aria-selected="false" aria-controls="panel-paste" data-panel="paste">
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 1.5A1.5 1.5 0 0 1 4.5 0h7A1.5 1.5 0 0 1 13 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5v-13ZM5 4h6v1H5V4Zm0 3h6v1H5V7Zm0 3h4v1H5v-1Z"/></svg>
+            Paste Markdown
+          </button>
+          <button class="input-tab" id="tab-upload" role="tab" aria-selected="false" aria-controls="panel-upload" data-panel="upload">
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M8 11a.75.75 0 0 1-.75-.75V4.56L5.28 6.53a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 1 1-1.06 1.06L8.75 4.56v5.69A.75.75 0 0 1 8 11Zm-5 2.5A1.5 1.5 0 0 1 4.5 12h7a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 11.5 16h-7A1.5 1.5 0 0 1 3 14.5v-1Z"/></svg>
+            Upload file
+          </button>
+        </div>
+
+        <div class="input-panels">
+          <div class="input-panel" id="panel-repo" role="tabpanel" aria-labelledby="tab-repo">
+            <form id="form-repo" novalidate>
+              <label class="field-label" for="repoInput">Public repository URL or <code>owner/repo</code></label>
+              <div class="field-row">
+                <input id="repoInput" class="text-input" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+                       placeholder="https://github.com/owner/repo" aria-describedby="repoHint">
+                <button class="btn btn-primary" type="submit" id="repoSubmit">Diagnose</button>
+              </div>
+              <p class="field-hint" id="repoHint">Only public data is read — README, file tree and manifests. No write permissions, ever.</p>
+              <details class="advanced">
+                <summary>Advanced: rate-limit token (optional)</summary>
+                <p class="field-hint">GitHub allows 60 unauthenticated requests per hour per IP. If you hit the limit, paste a personal access token with <strong>no scopes</strong> (read-only, public data). It is kept in your browser and sent only to api.github.com.</p>
+                <input id="tokenInput" class="text-input" type="password" autocomplete="off" placeholder="ghp_… (optional, no scopes required)">
+              </details>
+              <div class="form-status" id="repoStatus" role="alert" hidden></div>
+            </form>
+          </div>
+
+          <div class="input-panel" id="panel-paste" role="tabpanel" aria-labelledby="tab-paste" hidden>
+            <form id="form-paste" novalidate>
+              <label class="field-label" for="pasteInput">Paste your README Markdown</label>
+              <textarea id="pasteInput" class="text-input mono" rows="9" spellcheck="false"
+                        placeholder="# My Project&#10;&#10;Tell us what it does…"></textarea>
+              <div class="field-row spread">
+                <button class="btn btn-link" type="button" id="btnSample">Or try a sample diagnosis</button>
+                <button class="btn btn-primary" type="submit">Diagnose</button>
+              </div>
+              <p class="field-hint">Analyzed entirely in your browser. Nothing is uploaded, nothing is stored.</p>
+              <div class="form-status" id="pasteStatus" role="alert" hidden></div>
+            </form>
+          </div>
+
+          <div class="input-panel" id="panel-upload" role="tabpanel" aria-labelledby="tab-upload" hidden>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose or drop a README file">
+              <svg viewBox="0 0 16 16" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 11a.75.75 0 0 1-.75-.75V4.56L5.28 6.53a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 1 1-1.06 1.06L8.75 4.56v5.69A.75.75 0 0 1 8 11Zm-5 2.5A1.5 1.5 0 0 1 4.5 12h7a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 11.5 16h-7A1.5 1.5 0 0 1 3 14.5v-1Z"/></svg>
+              <p><strong>Drop a README here</strong> or click to choose a file</p>
+              <p class="dropzone-hint">.md, .markdown or .txt &middot; processed locally, never uploaded</p>
+              <input type="file" id="fileInput" accept=".md,.markdown,.txt,text/markdown,text/plain" hidden>
+            </div>
+            <div class="form-status" id="uploadStatus" role="alert" hidden></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="strip" aria-label="Principles">
+        <li><span class="strip-icon" aria-hidden="true">⌂</span><strong>Local-first</strong><small>Pasted markdown never leaves your browser.</small></li>
+        <li><span class="strip-icon" aria-hidden="true">⚙</span><strong>No AI required</strong><small>Deterministic static analysis. No keys, no paywalls.</small></li>
+        <li><span class="strip-icon" aria-hidden="true">👁</span><strong>Evidence first</strong><small>Every finding cites lines, snippets or repository facts.</small></li>
+        <li><span class="strip-icon" aria-hidden="true">🔓</span><strong>Read-only GitHub</strong><small>Public data only. Write permissions are never requested.</small></li>
+      </ul>
+    </section>
+
+    <!-- ========================== WORKSPACE ========================== -->
+    <section class="view view-work" id="view-work" hidden>
+      <div class="workbar">
+        <div class="workbar-src">
+          <span class="src-name" id="srcName">README.md</span>
+          <span class="src-meta" id="srcMeta"></span>
+        </div>
+        <div class="workbar-summary" id="summaryChips" aria-label="Finding summary"></div>
+        <div class="workbar-actions">
+          <button class="btn btn-ghost" id="btnCopyReport" type="button">Copy report</button>
+          <button class="btn btn-ghost" id="btnExportReport" type="button">Export</button>
+          <button class="btn btn-ghost" id="btnNew" type="button">New diagnosis</button>
+        </div>
+      </div>
+
+      <div class="workspace">
+        <aside class="report-pane" id="reportPane" aria-label="Diagnostic report">
+          <div class="report-filters" id="reportFilters"></div>
+          <div class="link-progress" id="linkProgress" hidden>
+            <div class="link-progress-bar"><div class="link-progress-fill" id="linkProgressFill"></div></div>
+            <span class="link-progress-text" id="linkProgressText">Checking links…</span>
+          </div>
+          <ol class="findings" id="findingsList"></ol>
+        </aside>
+
+        <section class="readme-pane" aria-label="README views">
+          <div class="readme-tabs" role="tablist" aria-label="README view">
+            <button class="readme-tab" id="rtab-rendered" role="tab" aria-selected="true" aria-controls="rpanel-rendered" data-panel="rendered">Rendered</button>
+            <button class="readme-tab" id="rtab-source" role="tab" aria-selected="false" aria-controls="rpanel-source" data-panel="source">Markdown</button>
+            <button class="readme-tab" id="rtab-coverage" role="tab" aria-selected="false" aria-controls="rpanel-coverage" data-panel="coverage">Coverage</button>
+            <span class="readme-stats" id="readmeStats"></span>
+          </div>
+          <div class="readme-panels">
+            <div class="readme-panel md-render md-body" id="rpanel-rendered" role="tabpanel" aria-labelledby="rtab-rendered" tabindex="0"></div>
+            <div class="readme-panel md-source" id="rpanel-source" role="tabpanel" aria-labelledby="rtab-source" tabindex="0" hidden></div>
+            <div class="readme-panel" id="rpanel-coverage" role="tabpanel" aria-labelledby="rtab-coverage" hidden></div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>README Doctor</strong> &middot; <em>Diagnose documentation. Don't blindly generate it.</em></p>
+    <p>MIT &middot; zero dependencies &middot; zero telemetry &middot; an <a href="https://github.com/VR-Developments/readme-doctor" target="_blank" rel="noopener noreferrer">open source</a> project by VR Developments</p>
+  </footer>
+
+  <dialog class="dlg" id="dlgMethodology" aria-labelledby="methodologyTitle">
+    <div class="dlg-body" id="methodologyBody"></div>
+    <button class="btn btn-ghost dlg-close" type="button" data-close>Close <kbd>Esc</kbd></button>
+  </dialog>
+  <dialog class="dlg" id="dlgShortcuts" aria-labelledby="shortcutsTitle">
+    <div class="dlg-body" id="shortcutsBody"></div>
+    <button class="btn btn-ghost dlg-close" type="button" data-close>Close <kbd>Esc</kbd></button>
+  </dialog>
+  <dialog class="dlg dlg-export" id="dlgExport" aria-labelledby="exportTitle">
+    <div class="dlg-body" id="exportBody"></div>
+    <button class="btn btn-ghost dlg-close" type="button" data-close>Close <kbd>Esc</kbd></button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

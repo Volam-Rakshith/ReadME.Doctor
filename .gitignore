@@ -1,0 +1,12 @@
+# Dependencies (this project has none — and CI enforces it)
+node_modules/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local artifacts
+*.log

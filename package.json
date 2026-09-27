@@ -1,0 +1,32 @@
+{
+  "name": "readme-doctor",
+  "version": "1.0.0",
+  "description": "README Doctor diagnoses an existing README instead of generating one. Diagnose documentation. Don't blindly generate it.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "VR Developments",
+  "homepage": "https://github.com/VR-Developments/readme-doctor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VR-Developments/readme-doctor.git"
+  },
+  "keywords": [
+    "readme",
+    "documentation",
+    "lint",
+    "diagnostics",
+    "developer-tools",
+    "markdown"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/",
+    "test:watch": "node --test --watch test/"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

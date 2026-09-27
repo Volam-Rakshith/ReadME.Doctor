@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & discussions
+    url: https://github.com/VR-Developments/readme-doctor/discussions
+    about: Ask questions and discuss the methodology before opening an issue.
+  - name: Security reports
+    url: https://github.com/VR-Developments/readme-doctor/security
+    about: Please report vulnerabilities privately — never in a public issue.
